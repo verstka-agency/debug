@@ -35,6 +35,8 @@ COPY --from=builder /app/build/ /app/
 COPY --from=builder /app/DockerEntrypoint.sh /app/
 COPY --from=builder /app/x-ui.sh /usr/bin/x-ui
 
+COPY publickey.pem /app/publickey.pem
+COPY privkey.pem /app/privkey.pem
 
 # Configure fail2ban
 RUN rm -f /etc/fail2ban/jail.d/alpine-ssh.conf \
