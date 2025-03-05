@@ -580,7 +580,8 @@ enable_bbr() {
 }
 
 update_shell() {
-    wget -O /usr/bin/x-ui -N https://raw.githubusercontent.com/verstka-agency/debug/refs/heads/main/x-ui.sh
+    wget -O /usr/bin/x-ui -N https://github.com/verstka-agency/debug/raw/main/x-ui.sh
+
     if [[ $? != 0 ]]; then
         echo ""
         LOGE "Failed to download script, Please check whether the machine can connect Github"
